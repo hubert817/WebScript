@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "视频播放速度控制器",
+  "version": "1.0.0",
+  "description": "为网页视频提供快速播放速度控制功能",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "action": {
+    "default_title": "视频速度控制设置"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
